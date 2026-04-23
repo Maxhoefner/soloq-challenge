@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <title>Soloq Challenge</title>
+  <script>
+    // Break browser cache: redirect to a timestamped URL Chrome has never seen.
+    // The ?_cb= param is ignored by Flask but guarantees a fresh network request.
+    if (!location.search.includes('_cb=')) {
+      location.replace(location.pathname + '?_cb=' + Date.now());
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css?v=7" />
+</head>
+<body>
+
+<div id="loading-overlay" class="loading-overlay" hidden>
+  <div class="loading-box">
+    <div class="spinner"></div>
+    <p class="loading-title">Cargando datos...</p>
+    <p class="loading-sub" id="loading-msg">Conectando con Riot API</p>
+  </div>
+</div>
+
+<div id="no-key-banner" class="no-key-banner" hidden>
+  <div class="no-key-inner">
+    <span class="no-key-icon">&#9888;&#65039;</span>
+    <div>
+      <strong>RIOT_API_KEY no configurada</strong><br>
+      Crea el archivo <code>.env</code> en la carpeta del proyecto con:<br>
+      <code>RIOT_API_KEY=RGAPI-xxxx-xxxx-xxxx</code><br>
+      Obtienela gratis en <a href="https://developer.riotgames.com" target="_blank">developer.riotgames.com</a>
+    </div>
+  </div>
+</div>
+
+<div id="error-banner" class="error-banner" hidden>
+  <span id="error-text"></span>
+  <button onclick="this.parentElement.hidden=true">&#x2715;</button>
+</div>
+
+<div id="refresh-toast" class="refresh-toast" hidden>
+  <div class="refresh-toast-inner">
+    <span class="refresh-toast-spinner"></span>
+    <span id="refresh-toast-msg">Actualizando datos...</span>
+  </div>
+</div>
+
+<div id="app" class="app" hidden>
+
+  <div class="page-header">
+    <div class="page-title-wrap">
+      <h1 class="page-title">SOLOQ CHALLENGE</h1>
+      <div class="page-subtitle">
+        <span class="update-label">ULTIMA ACTUALIZACION</span>
+        <span class="update-time" id="update-time">&#8212;</span>
+      </div>
+    </div>
+    <button class="refresh-btn" id="refresh-btn" title="Actualizar datos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="23 4 23 10 17 10"/>
+        <polyline points="1 20 1 14 7 14"/>
+        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+      </svg>
+      Actualizar
+    </button>
+  </div>
+
+  <div class="site-tabs-wrap">
+    <span class="site-tabs-label">STATS</span>
+    <div class="site-tabs" id="site-tabs">
+      <a class="site-tab active" data-site="opgg" href="#">OP.GG</a>
+      <a class="site-tab" data-site="ugg" href="#">U.GG</a>
+      <a class="site-tab" data-site="logs" href="#">League of Graphs</a>
+    </div>
+  </div>
+
+  <div class="main-section">
+
+    <div class="table-wrap">
+      <table class="ranking-table">
+        <thead>
+          <tr>
+            <th class="col-rank">#</th>
+            <th class="col-name">NOMBRE</th>
+            <th class="col-account">CUENTA LOL</th>
+            <th class="col-elo">ELO</th>
+            <th class="col-wl">W / L</th>
+          </tr>
+        </thead>
+        <tbody id="ranking-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="chart-wrap">
+      <div class="chart-header">
+        <span class="chart-title">Progresion de LP</span>
+        <button class="reset-zoom-btn" id="reset-zoom-btn" onclick="if(window.state&&state.chart)state.chart.resetZoom()" title="Restablecer zoom">Reset zoom</button>
+      </div>
+      <div class="chart-canvas-wrap">
+        <canvas id="lp-chart"></canvas>
+        <div id="chart-empty" class="chart-empty" hidden>
+          <p>El grafico de LP se acumula con el tiempo.</p>
+          <p>Actualiza periodicamente para ver la progresion.</p>
+        </div>
+      </div>
+      <div class="chart-legend" id="chart-legend"></div>
+    </div>
+
+  </div>
+
+  <div class="player-tabs-bar">
+    <div class="player-tabs" id="player-tabs"></div>
+  </div>
+
+  <div class="player-card-section" id="player-card-section"></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+<script src="/static/js/app.js?v=7"></script>
+</body>
+</html>
