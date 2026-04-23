@@ -51,17 +51,9 @@ _lock  = threading.Lock()
 
 
 def get_api_key():
-    key = os.environ.get('RIOT_API_KEY', '').strip()
-    if not key:
-        env_path = os.path.join(BASE_DIR, '.env')
-        if os.path.exists(env_path):
-            with open(env_path) as f:
-                for line in f:
-                    line = line.strip()
-                    if line.startswith('RIOT_API_KEY='):
-                        key = line.split('=', 1)[1].strip()
-                        break
-    return key
+    key = os.environ.get("RIOT_API_KEY")
+    print("DEBUG RIOT_API_KEY:", repr(key))
+    return key.strip() if key else ""
 
 
 def riot_get(url, params=None):
