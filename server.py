@@ -2,6 +2,10 @@
 Soloq Challenge - Flask server
 Live ranked data from Riot API (LAS region) for 4 friends.
 """
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
 import json
 import os
 import threading
@@ -33,17 +37,27 @@ PLAYERS = [
     {"gameName": "poposito27",       "tagLine": "LAS"},
     {"gameName": "Zeliøn",           "tagLine": "LAS"},
     {"gameName": "BAILA VINI BAILA", "tagLine": "RMFC"},
+    {"gameName": "falskgud",         "tagLine": "LAS"},
+    {"gameName": "Zhíwù",            "tagLine": "plant"},
+    {"gameName": "Good Dodger", "tagLine": "Calvo"},
+    {"gameName": "Ch1r0nel", "tagLine":"LAS"},
+    {"gameName": "tengo pecas", "tagLine" : "rayos"}
 ]
 
 PLAYER_COLORS = [
-    "#4ade80",  # Capjan        — green
-    "#60a5fa",  # La Bruixa     — blue
+    "#0a1ef9",  # Capjan        — green
+    "#fffb00",  # La Bruixa     — blue
     "#f472b6",  # conejarosada  — pink
-    "#facc15",  # juani         — yellow
+    "#0dff01",  # juani         — yellow
     "#fb923c",  # Mephisto      — orange
     "#a78bfa",  # Poposito      — violet
     "#34d399",  # Zelion        — emerald
-    "#f87171",  # Dante         — red
+    "#ffffff",  # Dante         — red
+    "#f87171",  #Falsk
+    "#02704a",  #Hans
+    "#d9ff00",  #Fran
+    "#BD830F",  #Chiro
+    "#0393A3"   #Cele
 ]
 
 _cache = {'data': None, 'loading': False, 'error': None}
@@ -542,5 +556,5 @@ if __name__ == '__main__':
     else:
         print('[server] WARNING: RIOT_API_KEY not set.')
         print('[server] Create a .env file: RIOT_API_KEY=RGAPI-xxxx')
-    print('[server] Open http://localhost:5000')
+    print(f"[server] Starting on port {os.environ.get('PORT', 8080)}")
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080)))

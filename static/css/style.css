@@ -690,8 +690,8 @@ img { display: block; }
   padding: 2px 10px; border-radius: 20px;
   letter-spacing: 0.02em;
 }
-.day-lp-delta.pos  { color: var(--green); background: var(--green-dim); }
-.day-lp-delta.neg  { color: var(--red);   background: var(--red-dim); }
+.day-lp-delta.pos  { color: #59d185;}
+.day-lp-delta.neg  { color: #ff6b6b; }
 .day-lp-delta.zero { color: var(--text-dim); background: var(--bg4); }
 
 /* ===== PER-MATCH LP BADGE ===== */

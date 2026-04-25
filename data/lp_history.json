@@ -6,6 +6,20 @@
       "tier": "MASTER",
       "division": "I",
       "raw_lp": 69
+    },
+    {
+      "timestamp": "2026-04-22T23:56:55.949362",
+      "total_lp": 2907,
+      "tier": "MASTER",
+      "division": "I",
+      "raw_lp": 107
+    },
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 2907,
+      "tier": "MASTER",
+      "division": "I",
+      "raw_lp": 107
     }
   ],
   "La Bruixa Sniper#GORDO": [
@@ -15,11 +29,39 @@
       "tier": "MASTER",
       "division": "I",
       "raw_lp": 7
+    },
+    {
+      "timestamp": "2026-04-22T23:56:55.949362",
+      "total_lp": 2807,
+      "tier": "MASTER",
+      "division": "I",
+      "raw_lp": 7
+    },
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 2800,
+      "tier": "MASTER",
+      "division": "I",
+      "raw_lp": 0
     }
   ],
   "poposito27#LAS": [
     {
       "timestamp": "2026-04-20T01:01:48.432696",
+      "total_lp": 2802,
+      "tier": "MASTER",
+      "division": "I",
+      "raw_lp": 2
+    },
+    {
+      "timestamp": "2026-04-22T23:56:55.949362",
+      "total_lp": 2802,
+      "tier": "MASTER",
+      "division": "I",
+      "raw_lp": 2
+    },
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
       "total_lp": 2802,
       "tier": "MASTER",
       "division": "I",
@@ -33,6 +75,20 @@
       "tier": "DIAMOND",
       "division": "I",
       "raw_lp": 75
+    },
+    {
+      "timestamp": "2026-04-22T23:56:55.949362",
+      "total_lp": 2775,
+      "tier": "DIAMOND",
+      "division": "I",
+      "raw_lp": 75
+    },
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 2775,
+      "tier": "DIAMOND",
+      "division": "I",
+      "raw_lp": 75
     }
   ],
   "Meph\u0131sto#Teton": [
@@ -42,6 +98,20 @@
       "tier": "DIAMOND",
       "division": "III",
       "raw_lp": 99
+    },
+    {
+      "timestamp": "2026-04-22T23:56:55.949362",
+      "total_lp": 2619,
+      "tier": "DIAMOND",
+      "division": "II",
+      "raw_lp": 19
+    },
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 2680,
+      "tier": "DIAMOND",
+      "division": "II",
+      "raw_lp": 80
     }
   ],
   "conejarosada#miau": [
@@ -51,11 +121,39 @@
       "tier": "DIAMOND",
       "division": "III",
       "raw_lp": 47
+    },
+    {
+      "timestamp": "2026-04-22T23:56:55.949362",
+      "total_lp": 2547,
+      "tier": "DIAMOND",
+      "division": "III",
+      "raw_lp": 47
+    },
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 2467,
+      "tier": "DIAMOND",
+      "division": "IV",
+      "raw_lp": 67
     }
   ],
   "Zeli\u00f8n#LAS": [
     {
       "timestamp": "2026-04-20T01:01:48.432696",
+      "total_lp": 2062,
+      "tier": "EMERALD",
+      "division": "IV",
+      "raw_lp": 62
+    },
+    {
+      "timestamp": "2026-04-22T23:56:55.949362",
+      "total_lp": 2062,
+      "tier": "EMERALD",
+      "division": "IV",
+      "raw_lp": 62
+    },
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
       "total_lp": 2062,
       "tier": "EMERALD",
       "division": "IV",
@@ -69,6 +167,74 @@
       "tier": "PLATINUM",
       "division": "III",
       "raw_lp": 2
+    },
+    {
+      "timestamp": "2026-04-22T23:56:55.949362",
+      "total_lp": 1682,
+      "tier": "PLATINUM",
+      "division": "IV",
+      "raw_lp": 82
+    },
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 1682,
+      "tier": "PLATINUM",
+      "division": "IV",
+      "raw_lp": 82
+    }
+  ],
+  "Good Dodger#Calvo": [
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 2722,
+      "tier": "DIAMOND",
+      "division": "I",
+      "raw_lp": 22
+    }
+  ],
+  "falskgud#LAS": [
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 2480,
+      "tier": "DIAMOND",
+      "division": "IV",
+      "raw_lp": 80
+    }
+  ],
+  "tengo pecas#rayos": [
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 2157,
+      "tier": "EMERALD",
+      "division": "III",
+      "raw_lp": 57
+    }
+  ],
+  "Zh\u00edw\u00f9#LAS": [
+    {
+      "timestamp": "2026-04-24T23:44:50.311534",
+      "total_lp": 0,
+      "tier": "UNRANKED",
+      "division": "",
+      "raw_lp": 0
+    }
+  ],
+  "Ch1r0nel#LAS": [
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 0,
+      "tier": "UNRANKED",
+      "division": "",
+      "raw_lp": 0
+    }
+  ],
+  "Zh\u00edw\u00f9#plant": [
+    {
+      "timestamp": "2026-04-24T23:52:46.171079",
+      "total_lp": 2800,
+      "tier": "MASTER",
+      "division": "I",
+      "raw_lp": 0
     }
   ]
 }

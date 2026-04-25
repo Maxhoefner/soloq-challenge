@@ -774,7 +774,6 @@ function buildMatchRow(m) {
   const winCls      = m.win ? 'win' : 'loss';
   const resultLabel = m.win ? 'Victoria' : 'Derrota';
 
-  // LP badge under champ image
   let lpHtml = '';
   if (m.lp_change !== null && m.lp_change !== undefined) {
     const lpCls  = m.lp_change > 0 ? 'pos' : m.lp_change < 0 ? 'neg' : 'zero';
