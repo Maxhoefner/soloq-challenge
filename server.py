@@ -41,7 +41,8 @@ PLAYERS = [
     {"gameName": "Zhíwù",            "tagLine": "plant"},
     {"gameName": "Good Dodger", "tagLine": "Calvo"},
     {"gameName": "Ch1r0nel", "tagLine":"LAS"},
-    {"gameName": "tengo pecas", "tagLine" : "rayos"}
+    {"gameName": "tengo pecas", "tagLine" : "rayos"},
+    {"gameName": "LamineYamal","tagLine" : "ryan1"}
 ]
 
 PLAYER_COLORS = [
@@ -214,14 +215,14 @@ def fetch_player(cfg, color):
         'kda': 0, 'avg_cs_min': 0, 'avg_duration': '00:00',
     }
     try:
-        acc    = get_account(name, tag);          puuid = acc['puuid'];       time.sleep(0.6)
-        summ   = get_summoner(puuid);                                          time.sleep(0.6)
+        acc    = get_account(name, tag);          puuid = acc['puuid'];       time.sleep(1.2)
+        summ   = get_summoner(puuid);                                          time.sleep(1.2)
         result['puuid']          = puuid
         result['profile_icon_id'] = summ.get('profileIconId', 29)
         result['profile_icon']   = profile_icon(summ.get('profileIconId', 29))
         result['level']          = summ.get('summonerLevel', 30)
 
-        entries = get_ranked_entries(puuid);                                   time.sleep(0.6)
+        entries = get_ranked_entries(puuid);                                   time.sleep(1.2)
         solo = next((e for e in entries if e['queueType'] == 'RANKED_SOLO_5x5'), None)
         if solo:
             tier, div, lp = solo.get('tier', 'UNRANKED'), solo.get('rank', ''), solo.get('leaguePoints', 0)
@@ -251,7 +252,7 @@ def fetch_player(cfg, color):
                     champ_agg[ck]['wins' if m['win'] else 'losses'] += 1
                     for s in ('kills', 'deaths', 'assists'):
                         champ_agg[ck][s] += m[s]
-                time.sleep(0.3)
+                time.sleep(0.8)
             except Exception as e:
                 print(f'[match] {mid}: {e}')
 
