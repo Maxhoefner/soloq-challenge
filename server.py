@@ -59,6 +59,7 @@ PLAYER_COLORS = [
     "#d9ff00",  #Fran
     "#BD830F",  #Chiro
     "#0393A3"   #Cele
+    "#A36003" #lamine
 ]
 
 _cache = {'data': None, 'loading': False, 'error': None}
