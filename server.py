@@ -42,7 +42,7 @@ PLAYERS = [
     {"gameName": "Good Dodger", "tagLine": "Calvo"},
     {"gameName": "Ch1r0nel", "tagLine":"LAS"},
     {"gameName": "tengo pecas", "tagLine" : "rayos"},
-    {"gameName": "LamineYamal","tagLine" : "ryan1"}
+    {"gameName": "LamineYamal","tagLine" : "Ryan1"}
 ]
 
 PLAYER_COLORS = [
